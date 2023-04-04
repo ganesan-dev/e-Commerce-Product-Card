@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    margin: 0;
+    background-color: #E1C66A;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    background-color: #474438;;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+    width: 100%;
+    font-size: 2em;
+    margin-bottom: 0;
+    height: 50px;
+}
+
+#product-card{
+    display: grid;
+    grid-template:
+                "a b";
+    margin: auto;
+    padding: auto;
+}
+
+.img:nth-child(odd){
+    margin-left: 60px;
+}
+
+.img:nth-child(even){
+    margin-right: 30px;
+}
+
+.card {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.delete-btn{
+    position: absolute;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 15px;
+    border: none;
+    width: 70px;
+    height: 30px;
+    background-color: azure;
+    z-index: 1;
+    margin-top: 270px;
+    margin-left: -90px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+}
+.info{
+    display: grid;
+    grid-template:
+                "a b";
+    z-index:1;
+    position: absolute;
+    margin: -70px auto auto 0px;
+    width: 600px;
+    height: 100px;
+    background-color: rgb(80, 79, 79);
+    border-radius: 20px;
+    z-index: -1;
+    margin-bottom: 20px;
+}
+
+.info>h2,h3 {
+    margin: 50px;
+}
+
+@media (max-width: 500px) {
+    body{
+        overflow-x: hidden;
+    }
+    #product-card{
+        display: block;
+    }
+    .img:nth-child(even), .img:nth-child(odd){
+        margin-left: 35px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .card{
+        width: 400px;
+        height: 200px;
+    }
+    .info{
+        width: 400px;
+        height:100px
+    }
+    .info>h2, h3{
+        font-size: 18px;
+    }
+    .delete-btn{
+        font-size: 10px;
+        width: 50px;
+        height: 25px;
+        margin-top: 200px;
+        margin-left: -70px;
+        padding-left: 5px;
+    }
+}
